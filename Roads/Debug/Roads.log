@@ -1,14 +1,10 @@
 ﻿  main.cpp
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(24): warning C4018: '<': signed/unsigned mismatch
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(241): warning C4018: '<': signed/unsigned mismatch
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(326): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(335): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(336): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(339): warning C4018: '<': signed/unsigned mismatch
-c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(386): warning C4018: '<': signed/unsigned mismatch
-  Roads.cpp
-c:\users\oldanko\documents\projects\game developement\logisim\roads\roads.cpp(67): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-c:\users\oldanko\documents\projects\game developement\logisim\roads\roads.cpp(67): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-  Generating Code...
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(244): warning C4018: '<': signed/unsigned mismatch
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(329): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(338): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(339): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(342): warning C4018: '<': signed/unsigned mismatch
+c:\users\oldanko\documents\projects\game developement\logisim\roads\main.cpp(389): warning C4018: '<': signed/unsigned mismatch
   Roads.vcxproj -> C:\Users\Oldanko\Documents\Projects\Game Developement\LogiSim\Debug\Roads.exe
   Roads.vcxproj -> C:\Users\Oldanko\Documents\Projects\Game Developement\LogiSim\Debug\Roads.pdb (Partial PDB)

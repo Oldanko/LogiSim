@@ -26,7 +26,7 @@ const ushort CAMERA_ZOOM_OUT_STEP	= 0b0000100000000000;
 const ushort CAMERA_ROTATE_MOUSE	= 0b0001000000000000;
 const ushort CAMERA_MOVE_MOUSE		= 0b0010000000000000;
 
-const ubyte ACTOR_STAND				= 0b00000001;
+const ubyte KEY_SPACE				= 0b00000001;
 const ubyte ACTOR_CROUCH			= 0b00000010;
 const ubyte ACTOR_PRONE				= 0b00000100;
 const ubyte ACTOR_SHOOT				= 0b00001000;
@@ -84,7 +84,7 @@ class Controls
 public:
 	static void init(); // read from file
 	static ushort cameraControls();
-	static ubyte actorControls();
+	static ubyte keyInput();
 	static ubyte mouseInputs();
 	static void update();
 

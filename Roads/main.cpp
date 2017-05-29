@@ -7,6 +7,9 @@
 #include "Roads.h"
 #include "list.h"
 
+#include <chrono>
+#include <thread>
+
 std::vector<node*> pathfinder(node * start, node * end);
 
 point screenToClip(point * coords);
@@ -365,7 +368,7 @@ void main()
 
 		//find the closest point to avg position of all points
 		for (GLuint i = 0; i < NODES_MAX; i++)
-		{
+		{			
 			GLfloat tempDist = sqrDist(&nodes[i].location, &avg);
 
 			if (tempDist < dist)
@@ -397,14 +400,15 @@ void main()
 					}
 				}
 			}
-
 			if(setRoad(&roads[ROADS_NUM], &nodes[i], closest)) ROADS_NUM++;
 		}
 
 	}
 		
 	bool roadCreator = false;
+	std::chrono::high_resolution_clock::time_point time_start, time_now;
 
+	time_start = std::chrono::high_resolution_clock::now();
 	do 
 	{
 		if (Controls::mouseInputs() & LMB_PRESS)
@@ -415,11 +419,22 @@ void main()
 				pfPushNode(selectNode(&screenToClip((point*)&Controls::mouseCoords())));
 		}
 
-		if (Controls::actorControls() & ACTOR_STAND)
+		if (Controls::mouseInputs() & RMB_PRESS)
+		{
+			RoadCreator::start = nullptr;
+			pf_start = nullptr;
+			pfPushNode(nullptr);
+		}
+
+		if (Controls::keyInput() & KEY_SPACE)
 		{
 			roadCreator = !roadCreator;
 			RoadCreator::start = nullptr;
 			pf_start = nullptr;
+			if (roadCreator)
+				puts("Road building mode");
+			else
+				puts("Path finding mode");
 		}
 
 		glClear(GL_COLOR_BUFFER_BIT);
@@ -443,6 +458,11 @@ void main()
 			pf_start->location.draw();
 
 		Controls::update();
+
+		time_now = std::chrono::high_resolution_clock::now();
+		std::this_thread::sleep_for(std::chrono::milliseconds(1001 / 60) - (time_now - time_start));
+		time_start = std::chrono::high_resolution_clock::now();
+
 	} while (WindowManager::update());
 
 	ShaderManager::terminate();

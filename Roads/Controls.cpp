@@ -23,7 +23,7 @@ KeyifPressed<ushort> cameraControls_default[] = {
 };
 
 KeyPressed<ubyte> actorControls_default[] = {
-	KeyPressed<ubyte>(GLFW_KEY_SPACE,	ACTOR_STAND),
+	KeyPressed<ubyte>(GLFW_KEY_SPACE,	KEY_SPACE),
 	KeyPressed<ubyte>(GLFW_KEY_C,		ACTOR_CROUCH),
 	KeyPressed<ubyte>(GLFW_KEY_Z,		ACTOR_PRONE),
 	KeyPressed<ubyte>(GLFW_KEY_B,		ACTOR_SHOOT)
@@ -64,7 +64,7 @@ ushort Controls::cameraControls()
 	return m_camera;
 }
 
-ubyte Controls::actorControls()
+ubyte Controls::keyInput()
 {
 	return m_actor;
 }
