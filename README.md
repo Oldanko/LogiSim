@@ -2,10 +2,10 @@
 An implementation of a A* algorithm with a visual representation.
 
 Initial graph is randomly generated when the program is started.
-Initial graph is a tree, therefore acyclic, with a root being a node closest to avarage position of all nodes.
+Initial graph is a tree, therefore acyclic, with a root being a node closest to average position of all nodes.
 
 Program works in two modes: road creator mode and path finder mode.
-To switch between modes press the spacebar. Selected mode wil be outputed in a console window.
+To switch between modes press the spacebar. Selected mode will be output in a console window.
 
 Road creator mode allows for creation of new lines between nodes of the graph.
 To create a road first select a starting node with a click of the left mouse button. 
